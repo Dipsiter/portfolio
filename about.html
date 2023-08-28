@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+<style>
+  #chat-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+
+#chat-header {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#chat-img {
+  cursor: pointer;
+  width: 50px;
+}
+
+#chat-window {
+  background-color: #f5f5f5;
+  width: 300px;
+  max-height: 400px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+#user-input {
+  display: flex;
+  margin-top: 10px;
+}
+
+textarea {
+  flex: 1;
+  resize: none;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+button {
+  margin-left: 10px;
+  padding: 5px 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.hide {
+  display: none;
+}
+
+
+
+</style>
+
+</head>
+
+<body>
+    <video width="500" controls>
+        <source src="version.mp4" type="video/mp4">
+    </video>
+
+
+
+    <div id="chat-container">
+      <div id="chat-header">
+        <img id="chat-img" src="chat.png" alt="Chat Icon" onclick="toggleChat()">
+      </div>
+      <div id="chat-window" class="hide">
+        <div id="chat-display"></div>
+        <div id="user-input">
+          <textarea id="user-message" placeholder="Type your message..." ></textarea>
+          <button onclick="sendMessage()">Send</button>
+        </div>
+      </div>
+    </div>
+  <script src="script.js"></script>
+
+
+</body>
+
+</html>
+
+</html>
