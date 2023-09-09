@@ -157,6 +157,27 @@
             display: none;
         }
 
+        .secondsection h1 {
+            font-size: 50px;
+            margin: 50px;
+        }
+
+        .secondsection p {
+
+            margin: 40px;
+        }
+
+        .secondsection h2 {
+
+            margin: 40px;
+        }
+        .secondsection a{
+            margin: 40px;
+            text-decoration: none;
+            color: white;
+            font-size: 30px;
+        }
+
         @media screen and (max-width: 1500px) {
             body {
                 background-color: rgb(0, 0, 33);
@@ -218,9 +239,11 @@
             }
         }
     </style>
+
+
     <script>
         // Replace 'YYYY-MM-DD' with the desired date
-        var selectedDate = new Date('2023-08-30');
+        var selectedDate = new Date('2023-09-10');
         var currentDate = new Date();
 
         if (currentDate.toDateString() === selectedDate.toDateString()) {
@@ -229,6 +252,8 @@
             });
         }
     </script>
+
+    
 </head>
 
 <body>
@@ -244,13 +269,12 @@
                     <li><a href="about.html"> About</a></li>
 
 
-
-                    <li><a href="suggestion.html"> Suggestions</a></li>
-
-
-
                     <li><a href="support.html"> Support </a></li>
-                    <li><a href="advanced-server.html"> Advanced-server </a></li> 
+
+                    
+
+
+                    <!--<li><a href="advanced-server.html"> Advanced-server </a></li> -->
 
 
 
@@ -263,6 +287,8 @@
         </nav>
     </header>
 
+    <h3>Version : 2.1</h3>
+
     <main>
         <section class="firstsection">
 
@@ -274,7 +300,7 @@
                 <div class="buttons">
                     <a href="updates.html"> <button class="btn">Check for Updates</button></a>
                     <!--<a href="files.html"> <button class="btn">Use Resume</button></a>-->
-                    
+
                 </div>
 
             </div>
@@ -283,10 +309,50 @@
             </div>
 
         </section>
+
         <hr>
+
+       <!-- <section class="secondsection">
+            <h1>What is Pass 99 ?</h1>
+            <p>Pass 99 is like a super safe locker for all your passwords. It's easy to use, and it keeps your passwords
+                protected from bad guys. Imagine it as a special vault that stores all your passwords securely, making
+                your online life much easier. Plus, it works on your computer and phone, so you don't have to remember
+                all those tricky passwords anymore. It's like having a trusted friend to help you with your online
+                accounts. What sets Pass 99 apart is its simplicity. It's designed to be user-friendly, so even if
+                you're not a tech expert, you can still use it with ease. You can think of it as a digital keychain that
+                stores all your keys (your passwords) in one place. You just need to remember one strong master password
+                to unlock it.
+                <br><br>
+                Security is a top priority for Pass 99. It uses powerful encryption to keep your passwords safe from
+                hackers and prying eyes. So, you can trust that your sensitive information is well-protected.
+                What's more, Pass 99 is super convenient. It can work on your computer, smartphone, and tablet, syncing
+                your passwords across all your devices. This means you'll have your passwords whenever and wherever you
+                need them, without the hassle of typing them in every time.
+
+                In a world where we have so many online accounts and passwords to manage, Pass 99 is like your personal
+                assistant, simplifying your digital life and keeping your online world secure. Say goodbye to the stress
+                of forgetting passwords and the worry of data breaches. With Pass 99, you're in control and protected.
+            </p>
+
+            <h2>Is It easy to use?</h2>
+            <p>Yes, it's data friendly and easy to use. Just you need to login with special id given to users.</p>
+
+           
+            <a href="password-manager.html">Open Pass 99</a>
+        </section>
+
+        <hr> -->
+
+
+
+
     </main>
 
-    <div id="chat-container">
+    <h3>Version Lists</h3><br><br>
+    <p>Version : 1.0</p>
+    <p>Version : 2.0</p>
+    <p>Version : 2.1</p>
+    <!--<div id="chat-container">
         <div id="chat-header">
             <img id="chat-img" src="chat.png" alt="Chat Icon" onclick="toggleChat()">
         </div>
@@ -297,7 +363,7 @@
                 <button onclick="sendMessage()">Send</button>
             </div>
         </div>
-    </div>
+    </div>-->
 
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
     <script>
@@ -310,7 +376,7 @@
 
     </script>
 
-    <script src="script.js"></script>
+    <script src="index.js"></script>
 
 </body>
 
