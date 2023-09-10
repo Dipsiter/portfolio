@@ -218,11 +218,13 @@
             }
         }
     </style>
-   
+
+
+
 </head>
 
 <body>
-    
+
     <header>
         <nav>
             <div class="left">Ant Gamer </div>
@@ -236,7 +238,7 @@
 
 
 
-                    
+
 
 
 
@@ -252,7 +254,9 @@
             </div>
         </nav>
     </header>
-    <h2>Warning: Advanced-server is live right now. Advanced-server is not fully developed. Changes that shown can be applied in original site.</h2>
+    <h2>Warning: Advanced-server is live right now. </h2>
+
+    <div id="fps-display">FPS: <span id="fps">50</span></div>
 
     <main>
         <section class="firstsection">
@@ -302,6 +306,46 @@
 
 
 
+    </script>
+    
+    <script>
+        const fpsElement = document.getElementById('fps');
+
+        function calculateFPS() {
+            let startTime, endTime;
+            let frames = 0;
+
+            function frame() {
+                if (!startTime) startTime = performance.now();
+                frames++;
+
+                endTime = performance.now();
+                const elapsed = endTime - startTime;
+
+                if (elapsed >= 1000) {
+                    const fps = (frames / elapsed * 1000).toFixed(2);
+                    fpsElement.textContent = fps;
+
+                    startTime = endTime;
+                    frames = 0;
+                }
+
+                requestAnimationFrame(frame);
+            }
+
+            frame();
+        }
+
+        // Wait for the DOM to be fully loaded before checking for an internet connection and starting the calculation
+        document.addEventListener('DOMContentLoaded', () => {
+            // Check if there's an internet connection
+            if (navigator.onLine) {
+                calculateFPS();
+            } else {
+                // No internet connection, display constant 0 FPS
+                fpsElement.textContent = '0.00';
+            }
+        });
     </script>
 
     <script src="script.js"></script>

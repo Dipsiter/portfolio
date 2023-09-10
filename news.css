@@ -58,12 +58,10 @@ nav {
     padding-block: 8px;
 }
 
-.company-logo img {
-    width: 120px;
-}
+
 
 .nav-links ul {
-    gap: 16px;
+    gap: 15px;
 }
 
 .hover-link {
